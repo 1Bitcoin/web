@@ -8,8 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
 @Service
-class ForumService (private val forumRepository: ForumsRepository,
-                    private val userService: UserService) {
+class ForumService (val forumRepository: ForumsRepository,
+                    val userService: UserService) {
 
     fun getForumBySlug(slug: String): ForumsEntity {
         return forumRepository.getForumBySlug(slug) ?: throw ForumNotFoundException("Can't find forum by slug")

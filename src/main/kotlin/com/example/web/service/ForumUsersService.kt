@@ -6,8 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
 @Service
-class ForumUsersService @Autowired constructor(val forumUsersRepository: ForumUsersRepository,
-                                               val userService: UserService, val forumService: ForumService
+class ForumUsersService (val forumUsersRepository: ForumUsersRepository,
+                         val userService: UserService,
+                         val forumService: ForumService
 ) {
 
     fun save(userName: String, forumSlug: String) {

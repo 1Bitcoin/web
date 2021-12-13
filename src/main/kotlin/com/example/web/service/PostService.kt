@@ -6,8 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
 @Service
-class PostService @Autowired constructor(val postRepository: PostsRepository, val threadService: ThreadsService,
-                                         val userService: UserService, val forumUserService: ForumUsersService
+class PostService (val postRepository: PostsRepository,
+                   val threadService: ThreadsService,
+                   val userService: UserService,
+                   val forumUserService: ForumUsersService
 ) {
 
     fun createPost(post: PostsEntity) {

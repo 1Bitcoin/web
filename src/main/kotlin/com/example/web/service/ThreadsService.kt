@@ -8,9 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
 @Service
-class ThreadsService @Autowired constructor(val threadRepository: ThreadsRepository,
-                                            val userService: UserService, val forumService: ForumService,
-                                            val forumUserService: ForumUsersService
+class ThreadsService (val threadRepository: ThreadsRepository,
+                      val userService: UserService,
+                      val forumService: ForumService,
+                      val forumUserService: ForumUsersService
 ) {
 
     fun checkThreadExists(slug: String) {
